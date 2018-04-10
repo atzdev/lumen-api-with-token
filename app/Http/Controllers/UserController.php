@@ -26,7 +26,7 @@ class UserController extends Controller
             $password = app('hash')->make($request->input('password'));
 
             $save = User::create([
-                'username'=> $username,
+                'username'=> $request->username,
                 'email'=> $email,
                 'password'=> $password,
                 'api_token'=> ''
